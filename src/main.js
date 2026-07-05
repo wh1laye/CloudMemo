@@ -1,4 +1,3 @@
-// ===== БЕЗ ES6 imports! marked загружается через CDN =====
 
 const { invoke } = window.__TAURI__.core;
 
@@ -30,7 +29,6 @@ if (!window.marked) {
   console.error('[JS] ❌ marked не загружен! Проверь интернет.');
 }
 
-// ===== Загрузка списка заметок =====
 async function loadNotes() {
   try {
     console.log('[JS] loadNotes() вызван');
@@ -89,7 +87,6 @@ async function openNote(name) {
   }
 }
 
-// ===== КНОПКА СОЗДАТЬ =====
 newNoteBtn.addEventListener('click', async () => {
   console.log('[JS] === КНОПКА СОЗДАТЬ НАЖАТА ===');
   
